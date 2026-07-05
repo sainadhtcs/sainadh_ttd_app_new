@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sri Venkateswara Devasthanam</title>
+<meta name="description" content="Darshan booking and seva offerings, welcoming devotees." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Cormorant+Garamond:ital@1&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="temple-band" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Om Namo Venkatesaya</p>
+        <h1>Welcome, devotee.</h1>
+        <p class="hero-sub">
+          Book your darshan, offer your seva, and carry a little of the hill's
+          quiet with you — from wherever you are.
+        </p>
+        <a href="#booking" class="cta">Book Darshan</a>
+      </div>
+      <div class="hero-photo">
+        <img src="images/welcome-photo.jpg" alt="A devotee welcoming visitors at the temple" />
+        <p class="photo-caption">"Wishing you a peaceful and blessed darshan." 🙏</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="booking" class="panel">
+      <div class="panel-head">
+        <span class="tag">01 — Darshan Slot</span>
+        <h2>Reserve your darshan time</h2>
+      </div>
+
+      <form id="booking-form" class="card-form">
+        <div class="field-row">
+          <label>
+            Full name
+            <input type="text" id="bk-name" required maxlength="60" placeholder="e.g. Lakshmi Narayana" />
+          </label>
+          <label>
+            Phone number
+            <input type="tel" id="bk-phone" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit number" />
+          </label>
+        </div>
+        <div class="field-row">
+          <label>
+            Darshan date
+            <input type="date" id="bk-date" required />
+          </label>
+          <label>
+            Preferred time slot
+            <select id="bk-slot" required>
+              <option value="" disabled selected>Choose a slot</option>
+              <option>5:00 AM – 7:00 AM (Suprabhata)</option>
+              <option>7:00 AM – 9:00 AM</option>
+              <option>9:00 AM – 11:00 AM</option>
+              <option>11:00 AM – 1:00 PM</option>
+              <option>2:00 PM – 4:00 PM</option>
+              <option>4:00 PM – 6:00 PM</option>
+              <option>6:00 PM – 8:00 PM</option>
+            </select>
+          </label>
+        </div>
+        <div class="field-row">
+          <label>
+            Number of devotees
+            <input type="number" id="bk-count" min="1" max="10" value="1" required />
+          </label>
+        </div>
+        <button type="submit" class="submit-btn">Confirm Booking</button>
+      </form>
+
+      <div id="booking-list" class="entry-list" aria-live="polite"></div>
+    </section>
+
+    <section id="seva" class="panel alt">
+      <div class="panel-head">
+        <span class="tag">02 — Seva Offering</span>
+        <h2>Make an offering</h2>
+      </div>
+
+      <form id="donation-form" class="card-form">
+        <div class="field-row">
+          <label>
+            Full name
+            <input type="text" id="dn-name" required maxlength="60" placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" id="dn-email" required placeholder="you@example.com" />
+          </label>
+        </div>
+        <div class="field-row">
+          <label>
+            Purpose
+            <select id="dn-purpose" required>
+              <option value="" disabled selected>Choose a seva</option>
+              <option>Annadanam (Food Offering)</option>
+              <option>Archana</option>
+              <option>Kalyanotsavam</option>
+              <option>Temple Maintenance</option>
+              <option>General Donation</option>
+            </select>
+          </label>
+          <label>
+            Amount (₹)
+            <input type="number" id="dn-amount" min="10" step="10" required placeholder="e.g. 501" />
+          </label>
+        </div>
+        <button type="submit" class="submit-btn">Offer Seva</button>
+      </form>
+
+      <div id="donation-list" class="entry-list" aria-live="polite"></div>
+    </section>
+
+    <section class="panel timings">
+      <div class="panel-head">
+        <span class="tag">03 — Temple Timings</span>
+        <h2>Darshan hours</h2>
+      </div>
+      <ul class="timing-list">
+        <li><span>Suprabhata Seva</span><span>3:00 AM – 3:30 AM</span></li>
+        <li><span>Darshan Begins</span><span>5:00 AM</span></li>
+        <li><span>Afternoon Break</span><span>1:00 PM – 2:00 PM</span></li>
+        <li><span>Darshan Ends</span><span>8:00 PM</span></li>
+      </ul>
+      <p class="disclaimer">
+        Timings are illustrative for this demo site. For real visits, always confirm
+        official timings and book through the official Tirumala Tirupati Devasthanams
+        channels.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with devotion 🙏 — a personal demo project, not an official website.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
